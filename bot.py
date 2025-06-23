@@ -13,7 +13,7 @@ def start(update, context):
     update.message.reply_text('Please Join All My Update Channels To Use Me!', reply_markup=reply_markup)
 
 def main():
-    updater = Updater(os.environ.get('8021898501:AAGrrDBDQhhvrTOlyDhdAoPgUdiV_pGIBtU'), use_context=True)
+    updater = Updater(os.environ.get('BOT_TOKEN'))  # Remove use_context=True
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     updater.start_polling()
